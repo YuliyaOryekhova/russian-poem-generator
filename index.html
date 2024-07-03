@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>AI Russian Poem Generator</title>
   </head>
   <body>
@@ -12,7 +13,7 @@
         <h1>AI Russian Poem Generator</h1>
       </header>
       <main>
-        <form action="">
+        <form id="poem-generator-form">
           <input
             type="text"
             placeholder="Enter the topic of the Russian poem"
@@ -24,12 +25,7 @@
           <input type="submit" class="submit-button" />
         </form>
 
-        <div class="poem">
-          Я вас любил: любовь еще, быть может,<br />
-          В душе моей угасла не совсем;<br />
-          Но пусть она вас больше не тревожит;<br />
-          Я не хочу печалить вас ничем.
-        </div>
+        <div class="poem" id="poem"></div>
       </main>
 
       <footer>
