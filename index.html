@@ -7,44 +7,48 @@
     <title>AI Russian Poem Generator</title>
   </head>
   <body>
-    <header>
-      <h1>AI Russian poem generator</h1>
-    </header>
-    <main>
-      <form action="">
-        <input
-          type="text"
-          placeholder="Enter the topic of the Russian poem"
-          autofocus
-          required
-          autocomplete="off"
-        />
-        <input type="submit" />
-      </form>
+    <div class="container">
+      <header>
+        <h1>AI Russian Poem Generator</h1>
+      </header>
+      <main>
+        <form action="">
+          <input
+            type="text"
+            placeholder="Enter the topic of the Russian poem"
+            autofocus
+            required
+            autocomplete="off"
+            class="instructions"
+          />
+          <input type="submit" class="submit-button" />
+        </form>
 
-      <div>
-        Я вас любил: любовь еще, быть может,<br />
-        В душе моей угасла не совсем;<br />
-        Но пусть она вас больше не тревожит;<br />
-        Я не хочу печалить вас ничем.
-      </div>
-    </main>
+        <div class="poem">
+          Я вас любил: любовь еще, быть может,<br />
+          В душе моей угасла не совсем;<br />
+          Но пусть она вас больше не тревожит;<br />
+          Я не хочу печалить вас ничем.
+        </div>
+      </main>
 
-    <footer>
-      This AI project was coded by
-      <a href="https://github.com/YuliyaOryekhova" target="_blank"
-        >Yuliya Oryekhova</a
-      >
-      and is
-      <a
-        href="https://github.com/YuliyaOryekhova/russian-poem-generator"
-        target="_blank"
-        >open-sourced on GitHub</a
-      >and is
-      <a href="https://ai-russian-poem-generator.netlify.app/" target="_blank"
-        >hosted on Netlify</a
-      >
-    </footer>
+      <footer>
+        This AI project was coded by
+        <a href="https://github.com/YuliyaOryekhova" target="_blank"
+          >Yuliya Oryekhova</a
+        >
+        and is
+        <a
+          href="https://github.com/YuliyaOryekhova/russian-poem-generator"
+          target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and is
+        <a href="https://ai-russian-poem-generator.netlify.app/" target="_blank"
+          >hosted on Netlify</a
+        >
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
