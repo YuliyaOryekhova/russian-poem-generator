@@ -1,13 +1,29 @@
-function generatePoem(event) {
-  event.preventDefault();
+function displayPoem(response) {
+  console.log("poem generated");
 
-  let poemElement = document.querySelector("#poem");
   new Typewriter("#poem", {
-    strings: "Я вас любил: любовь еще, быть может",
+    strings: response.data.answer,
     autoStart: true,
     delay: 150,
     cursor: "",
   });
+}
+
+function generatePoem(event) {
+  event.preventDefault();
+
+  let instructionsInput = document.querySelector("#user-instructions");
+  let apiKey = "51566a8f34a33td009162d547131o6b3";
+  let context =
+    "You are a romantic poem expert and love to write short nicely rhyming poems. Your mission is to generate a 4-LINE rhyming poem in basic HTML in Russian without displaying HTML tags themselves and separate each line with a <br /> Make sure to follow the user instructions.";
+  let prompt = `user instructions: generate a russian poem about ${instructionsInput.value}`;
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  console.log("generating poem");
+  console.log(`Prompt: ${prompt}`);
+  console.log(`Context: ${context}`);
+
+  axios.get(apiUrl).then(displayPoem);
 }
 
 let poemFormElement = document.querySelector("#poem-generator-form");
